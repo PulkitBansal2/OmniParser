@@ -21,30 +21,30 @@ Before getting started, ensure your system meets the following requirements:
 Follow the steps below to install and run the OmniParser model:
 
 
-# 1. Clone the Repository
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/microsoft/OmniParser.git
 cd OmniParser
 ```
 
-# 2. Create and Activate Conda Environment
+### 2. Create and Activate Conda Environment
 ```bash
 conda create -n "omni" python==3.12
 conda activate omni
 ```
 
-# 3. Install Required Python Packages
+### 3. Install Required Python Packages
 ```bash
 pip install -r requirements.txt
 ```
 
-# 4. Log In to Hugging Face
+### 4. Log In to Hugging Face
 ```bash
 huggingface-cli login
 ```
-# If you don't have an account, create one at https://huggingface.co/join
+If you don't have an account, create one at https://huggingface.co/join
 
-# 5. Download Model Weights
+### 5. Download Model Weights
 ```bash
 for f in icon_detect/{train_args.yaml,model.pt,model.yaml} \
         icon_caption/{config.json,generation_config.json,model.safetensors}; do
@@ -52,12 +52,12 @@ for f in icon_detect/{train_args.yaml,model.pt,model.yaml} \
 done
 ```
 
-# 6. Organize Model Weights
+### 6. Organize Model Weights
 ```bash
 mv weights/icon_caption weights/icon_caption_blip2  # or icon_caption_florence
 ```
 
-#7. Launch the Application
+### 7. Launch the Application
 ```bash
 python gradio_demo.py
 ```
