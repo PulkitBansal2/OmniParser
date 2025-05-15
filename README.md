@@ -46,10 +46,7 @@ If you don't have an account, create one at https://huggingface.co/join
 
 ### 5. Download Model Weights
 ```bash
-for f in icon_detect/{train_args.yaml,model.pt,model.yaml} \
-        icon_caption/{config.json,generation_config.json,model.safetensors}; do
-  huggingface-cli download microsoft/OmniParser-v2.0 "$f" --local-dir weights
-done
+for f in icon_detect/{train_args.yaml,model.pt,model.yaml} icon_caption/{config.json,generation_config.json,model.safetensors}; do huggingface-cli download microsoft/OmniParser-v2.0 "$f" --local-dir weights; done
 ```
 
 ### 6. Organize Model Weights
